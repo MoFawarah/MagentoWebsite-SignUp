@@ -5,7 +5,7 @@
     <classes>
       <class name="TestCases.signUp">
         <methods>
-          <include name="Sign_Up"/>
+          <include name="Adding_One_Item_To_Cart"/>
           <include name="Setup"/>
         </methods>
       </class> <!-- TestCases.signUp -->
