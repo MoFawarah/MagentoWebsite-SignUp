@@ -86,7 +86,7 @@ public class signUp extends parameters {
 
 	}
 
-	@Test(priority = 5, enabled = true)
+	@Test(priority = 4, enabled = true)
 	public void Adding_One_Item_To_Cart() throws InterruptedException {
 		driver.get(Back_To_Home_Page_Link);
 		WebElement Items_Container = driver.findElement(By.cssSelector(".product-items.widget-product-grid"));
@@ -127,24 +127,22 @@ public class signUp extends parameters {
 
 		WebElement Checkout = driver.findElement(By.id("product-addtocart-button"));
 		Checkout.click();
-		
+
 		Thread.sleep(4000);
 		String Adding_To_Cart_Msg = driver.findElement(By.className("message-success")).getText();
-		
-		
+
 		Boolean Actual_Result = Adding_To_Cart_Msg.contains("You added");
 		Boolean Expected_Result = true;
 
 		assertEquals(Actual_Result, Expected_Result);
 	}
 
-	@Test(priority = 6, enabled = true)
+	@Test(priority = 5, enabled = true)
 	public void Checking_Reviews_From_Checkout_Page() {
 
 		WebElement Add_Your_Review_Link = driver.findElement(By.cssSelector(".action.add"));
 		Add_Your_Review_Link.click();
 
-		
 		Boolean Actual_Result = Add_Your_Review_Link.getText().toLowerCase().contains("review");
 
 		Boolean Expected_Result = true;
